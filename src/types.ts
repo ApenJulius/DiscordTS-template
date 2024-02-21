@@ -30,3 +30,4 @@ declare module 'discord.js' {
         slashCommands: Collection<string, SlashCommand>
     }
   }
+  

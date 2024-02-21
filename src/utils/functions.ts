@@ -1,4 +1,4 @@
-import { DiscordAPIError, Attachment, EmbedBuilder, TextChannel, Colors, Interaction, Client } from 'discord.js'
+import { DiscordAPIError, EmbedBuilder, TextChannel, Colors, Client } from 'discord.js'
 import consola from 'consola'
 
 

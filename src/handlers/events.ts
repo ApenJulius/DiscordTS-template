@@ -24,3 +24,4 @@ module.exports = (client: Client) => {
         consola.success(`Successfully registered event: ${event.name}`)
     })
 }
+
