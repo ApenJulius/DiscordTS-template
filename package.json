@@ -7,7 +7,7 @@
     "start": "node -r dotenv/config ./dist/index.js",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "dev": "ts-node -r dotenv/config src/index.ts"
+    "devCode": "tsc --watch"
   },
   "dependencies": {
     "consola": "^3.2.3",
