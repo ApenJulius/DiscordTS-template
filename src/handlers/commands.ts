@@ -21,7 +21,7 @@ module.exports = (client : Client) => {
         body: slashCommands.map(command => command.toJSON())                    // If you want commands added right away you can do so to a server of your choosing with:
     })                                                                          // Routes.applicationGuildCommands(process.env.APPLICATION_ID, <serverId>)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .then((data : any) => {
+        .then((data : any) => {                                                 // https://discordjs.guide/creating-your-bot/command-deployment.html#guild-commands
             consola.success(`Successfully loaded ${data.length} slash command(s)`)
         }).catch(e => {
             consola.error(e) // TODO: Log errors differently here
