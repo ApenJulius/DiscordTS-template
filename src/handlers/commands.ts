@@ -17,9 +17,9 @@ module.exports = (client : Client) => {
         consola.success(`Successfully registered command: ${command.command.name}`)
     })
     const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN)
-    rest.put(Routes.applicationCommands(process.env.APPLICATION_ID), {
-        body: slashCommands.map(command => command.toJSON())
-    })
+    rest.put(Routes.applicationCommands(process.env.APPLICATION_ID), {          // this is GLOBAL commands. It can take up to an hour for them to appear in server
+        body: slashCommands.map(command => command.toJSON())                    // If you want commands added right away you can do so to a server of your choosing with:
+    })                                                                          // Routes.applicationGuildCommands(process.env.APPLICATION_ID, <serverId>)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         .then((data : any) => {
             consola.success(`Successfully loaded ${data.length} slash command(s)`)
